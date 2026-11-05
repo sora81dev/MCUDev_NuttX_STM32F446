@@ -1,8 +1,9 @@
-export CONFIG_APPS_DIR="."
+#!/usr/bin/env bash
+set -euo pipefail
+
+APPDIR="$(cd "$(dirname "$0")/.." && pwd)"
+export CONFIG_APPS_DIR="$APPDIR"
 export CONFIG_INIT_ENTRYPOINT="main"
 
-curd=$(pwd)
 cd ~/nuttxspace/nuttx/
-make
-
-cd $curd
+make CONFIG_APPS_DIR="$APPDIR"

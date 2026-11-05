@@ -7,7 +7,8 @@ APPDIR = ${shell pwd}
 CSRCS = main.c
 COBJS = main.o
 
-ROOTDEPPATH = --dep-path .
+VPATH += :src
+ROOTDEPPATH = --dep-path src
 
 # Build targets
 
