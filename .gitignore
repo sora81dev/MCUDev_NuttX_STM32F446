@@ -1,0 +1,6 @@
+.context
+.dirlinks
+.direnv/
+*.dep
+*.o
+*.a
